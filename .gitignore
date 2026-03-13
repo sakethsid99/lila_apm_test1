@@ -1,0 +1,13 @@
+# Streamlit / Python
+venv/
+__pycache__/
+*.pyc
+.streamlit/config.toml
+research/
+
+# Data (Optional: Include if you want data on GitHub)
+# player_data/
+
+# OS
+.DS_Store
+Thumbs.db
