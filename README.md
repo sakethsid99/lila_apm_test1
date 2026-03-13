@@ -1,25 +1,27 @@
 # LILA BLACK Visualization: Journey Nexus
 # Link for working tool: https://lilablack.streamlit.app/
 
-Journey Nexus is a powerful, interactive visualization tool designed to analyze player movement, combat, and looting patterns in the LILA BLACK game world. It transforms raw Parquet event data into actionable heatmaps and playback animations.
+Journey Nexus is a powerful, interactive visualization tool designed to analyze player movement, combat, and looting patterns in the LILA BLACK game world. It transforms raw Parquet event data into actionable heatmaps and playback animations. 
 
-## 🚀 Quick Start
+Target User : Level Designer
+Name: Sid, Level Designer at LILA Games
 
-### 1. Prerequisites
-*   Python 3.8 or higher.
-*   The `player_data` folder should be in the root directory (containing date folders and `minimaps`).
+Objective: To create maps that feel balanced, exciting, and free of "frustrating" deaths.
 
-### 2. Installation
-Clone the repository and install the required dependencies:
-```bash
-# In the project root
-pip install -r requirements.txt
-```
+Core Need: Sid needs to know if the physical landmarks he placed (bridges, towers, loot rooms) are actually being used by players or if they are becoming "dead zones."
 
-### 3. Run the App
-```bash
-streamlit run app.py
-```
+The Pain Points
+Data Blindness: Sid has thousands of telemetry rows but cannot "see" the flow of a match. He is guessing where bottlenecks occur.
+The "Bot Noise" Problem: Raw data mixes human and bot movement. Sid needs to know how real players behave, as bots often follow predictable paths that don't reflect true player sentiment.
+
+Static vs. Dynamic Flow: He can see where people died, but he doesn't know when or why. Was it a fair fight, or did the "Storm" trap them because of poor terrain design?
+
+🛠️ How This Tool Solves Them
+This visualization tool transforms raw Parquet files into an interactive diagnostic dashboard:
+Match Reconstruction: Instead of viewing isolated journeys, the tool aggregates all files by match_id. Sid can watch an entire 50-player session unfold in real-time using the Timeline Playback.
+Human-Centric Filtering: With a single toggle, Sid can filter out bots to analyze authentic human "Hotdrop" behavior and rotation patterns.
+Lethality Heatmaps: The tool overlays a density heatmap of Kill and KilledByStorm events. This instantly highlights "Meat Grinders" where the map geometry might be giving one side an unfair advantage.
+Spatial Context: By mapping world coordinates precisely to the 1024x1024 minimap, Sid sees exactly which rock, building, or bridge is the source of the friction.
 
 ## 🛠️ Tech Stack
 *   **Core**: Python
