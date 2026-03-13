@@ -36,9 +36,3 @@ streamlit run app.py
 ## 📄 Documentation
 *   [ARCHITECTURE.md](ARCHITECTURE.md): Technical deep-dive into coordinate mapping and data flow.
 *   [INSIGHTS.md](INSIGHTS.md): Analysis of three key game-design patterns discovered using this tool.
-
-## 🌐 Deployment
-This app can be easily deployed to **Streamlit Community Cloud**:
-1.  Push the code to a GitHub repository.
-2.  Connect the repository to [share.streamlit.io](https://share.streamlit.io).
-3.  Ensure the `player_data` folder is included or hosted appropriately.
